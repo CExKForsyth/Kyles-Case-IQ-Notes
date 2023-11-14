@@ -109,6 +109,8 @@ It helps to include a link to the Release Notes, the Compare changes, the Envars
 
 Once this is approved and you've merged the PR into the `develop` branch, it is time to deploy.
 
+At this point, you can move your JIRA ticket from the `In Progess` column into the `Dev Completed` column.
+
 ## Step 6: Deployment
 
 First, head to the Slack channel for this specific project, and ask the BA, (usually I just ping the whole channel by typing `@here`) if you are clear to deploy an upgrade to `v9.1.0`.
@@ -141,5 +143,39 @@ From here, click the latest build on the left-hand side list of builds, and then
 
 ![Screen Shot 2023-11-14 at 2 26 38 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/d942de88-0bac-494b-a513-f4569360099b)
 
+Now we can set up our deployment. 
 
+Iterate the Git Tag
 
+![Screen Shot 2023-11-14 at 2 48 23 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/c3d37c7e-5584-4660-87ff-21082fba0356)
+
+It's always good to make a backup, in the PreRun phase
+
+![Screen Shot 2023-11-14 at 2 49 19 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/90d91ae1-0880-4276-a948-fa741d45ed28)
+
+In the Postrun Scripts we add our upgrade command
+
+![Screen Shot 2023-11-14 at 2 49 51 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/af5002df-7df7-47a7-a47e-ad8628571bbf)
+
+In the Server_Envars we add any server envars that were noted in the Release Notes/In our PR description.
+
+![Screen Shot 2023-11-14 at 2 51 04 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/e182c8ed-38bb-4e6c-a324-35cc8d84dc3f)
+![Screen Shot 2023-11-14 at 2 51 16 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/e96a6936-ba4c-4ff4-9189-d4e4744ba379) (these are not for v9.1.0, but I'm just showing an example of some envars)
+
+Then alert the Slack Channel that you are deploying, double check everything you just changed in this Jenkins Rebuild page, and then click `Rebuild`
+
+![Screen Shot 2023-11-14 at 2 52 52 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/c130d588-b45e-4ee9-aea8-4f5414e66667)
+
+Keep an eye on your Deployment, if it fails or crashes on one of the steps, you will need to investigate what happened and try to find a solution.
+
+If your deployment finishes without issues, great! You've deployed an Upgrade.
+
+Now head to the Slack channel, alert the channel that your deployment is completed.
+
+Go back to JIRA, and in your Upgrade ticket, you need to select the beta tag from your deployment in the `Fix Tag` dropdown field. If you do not see your beta tag in the selections, ask the BA to add the Fix Tag for you. 
+
+Once the Fix Tag is there, select your beta tag from the Fix Tag dropdown field, save the ticket, and then you can move it the ticket into the `Ready For QA` column.
+
+Once QA has passed the ticket, you can ask the BA when they would like for you to deploy that upgrade to PROD as well. If it's a LIVE app, you may need to cut a release tag on GitHub before deploying to PROD. If you are unsure how to go about that, just ask another developer or manager for assistance to show you this process.
+
+** Any PROD deployment needs to be coordinated beforehand with the project BA at a day/time that works specifically for that client, and no PROD deployment should be done without clear instructions given about when to do so. Always ask the BA before deploying.
