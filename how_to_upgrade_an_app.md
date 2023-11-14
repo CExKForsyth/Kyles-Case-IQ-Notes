@@ -1,6 +1,6 @@
 # Case IQ - Upgrading an Application
 
-Helpful Tips:
+### Helpful Tips:
 
 It is helpful to know whether you are doing a major version upgrade, a patch upgrade, or perhaps multiple upgrades. We can find this out by going to Confluence and looking up the release notes for the version we are upgrading to
 
