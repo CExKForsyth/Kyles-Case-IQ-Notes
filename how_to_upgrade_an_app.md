@@ -1,4 +1,4 @@
-# CASE IQ - Upgrading an Application
+# Case IQ - Upgrading an Application
 
 Helpful Tips:
 
