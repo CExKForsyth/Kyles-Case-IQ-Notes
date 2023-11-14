@@ -15,8 +15,10 @@ On the left side of the page you will see Release Notes listed for different ver
 - When upgrading from `v9.0.0` to `v9.0.3`, this would be considered a patch release. The changes are extremely minimal, and do not require the use of `make p-release-upgrade` when deploying. A patch release can be identified as you will not see one of the versions in the left-hand list of version releases.
 
 - If you are tasked with upgrading from `v9.0.3` to `v9.2.0`, you cannot upgrade this directly. _**Each major release must be upgraded in succession**_, meaning that in order to do this, you would need to upgrade two times: 
-_**First you would upgrade `v9.0.3` to `v9.1.0`
-Then you would repeat the process by upgrading `v9.1.0` to `v9.2.0`**_
+
+_**First you would upgrade `v9.0.3` to `v9.1.0`**_
+
+_**Then you would repeat the process by upgrading `v9.1.0` to `v9.2.0`**_
 
 Here we can find specific instructions on changes that may need to be made to our projects when upgrading to this version, especially things that may be considered edge-cases, commonly customized features in our config repos, Environment Variables that may have changed, become defunct, or that may be newly required.
 ![Screen Shot 2023-11-14 at 1 35 40 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/3daf4691-a7cc-4f7a-9371-b0df1aaa4548)
