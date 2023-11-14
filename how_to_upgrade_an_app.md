@@ -61,7 +61,7 @@ This time we are looking for any changes mentioned that maybe were not included 
 
 ** Also, if the project you are working on is large, and heavily-customized, you may need to look through the config for files that have been overwritten from platform, and compare it to the [platform compare changes](https://github.com/i-Sight/isight_main_v5_beta/compare/v9.0.3...v9.1.0). Of course you don't need to scroll through all 1195+ files.. but anything overwritten in the config, or in the `webpack-overrides` file of your config, should be double checked to ensure that the upgrade won't be breaking previously built custom features.
 
-Another thing to do while reading through the [RELEASE_UPGRADE.md](https://github.com/i-Sight/isight_main_v5_beta/blob/v9.1.0/RELEASE_UPGRADE.md) is ensure that any altered or new ENV variables are accounted for. If some are optional, ask the BA for your sprint if the client will be requiring those features. We can test these new variables by adding them into our `bash_profile`. 
+Another thing to do while reading through the [RELEASE_UPGRADE.md](https://github.com/i-Sight/isight_main_v5_beta/blob/v9.1.0/RELEASE_UPGRADE.md) is ensure that any altered or new ENV variables are accounted for. If some are optional, ask the BA listed on your Upgrade Ticket whether the client will be requiring those features. We can test these new variables by adding them into our `bash_profile`. 
 
 ## Step 4: Test Locally
 
