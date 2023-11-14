@@ -17,7 +17,7 @@ Here we can find specific instructions on changes that may need to be made to ou
 
 For the sake of this document, I will walk through upgrading a project from `v9.0.3` to `v9.1.0`
 
-##Step 1: Set up your project locally. 
+## Step 1: Set up your project locally. 
 
 If you haven't already, create a directory in your local machine where you can store this project. 
 
@@ -35,7 +35,7 @@ Once you have the project set up locally. Test it out, ensure it has set up and 
 
 ![Screen Shot 2023-11-14 at 1 46 42 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/b20a90b2-f4a2-4737-aaaa-2fc10bbcbf1b)
 
-Step 2: Make the Config Changes.
+## Step 2: Make the Config Changes.
 
 Now we need to make all the necessary changes to our config files. These changes can be found by navigating to the [config_base_v5](https://github.com/i-Sight/config_base_v5/compare) project on GitHub, and running a compare between the version we are starting from, and the version we are upgrading to.
 
@@ -55,7 +55,7 @@ In this branch, make all the changes seen on that [compare page](https://github.
 When you get to the package.json changes. Do not change the version # to match what's shown. The version can be left as is. Also, instead of manually editing any dependencies in the package.json, just run the code outlined in the [RELEASE_UPGRADE.md](https://github.com/i-Sight/isight_main_v5_beta/blob/v9.1.0/RELEASE_UPGRADE.md). It will be something like this:
 `yarn upgrade isight@git+ssh://git@github.com/i-Sight/isight_main_v5_beta#v9.1.0`
 
-Step 3: Once all changes have been made, it is good to reference the [RELEASE_UPGRADE.md](https://github.com/i-Sight/isight_main_v5_beta/blob/v9.1.0/RELEASE_UPGRADE.md) document once again.
+## Step 3: Once all changes have been made, it is good to reference the [RELEASE_UPGRADE.md](https://github.com/i-Sight/isight_main_v5_beta/blob/v9.1.0/RELEASE_UPGRADE.md) document once again.
 
 This time we are looking for any changes mentioned that maybe were not included in the config compare file. Read through this document. 
 
@@ -63,7 +63,7 @@ This time we are looking for any changes mentioned that maybe were not included 
 
 Another thing to do while reading through the [RELEASE_UPGRADE.md](https://github.com/i-Sight/isight_main_v5_beta/blob/v9.1.0/RELEASE_UPGRADE.md) is ensure that any altered or new ENV variables are accounted for. If some are optional, ask the BA for your sprint if the client will be requiring those features. We can test these new variables by adding them into our `bash_profile`. 
 
-Step 4: Test Locally
+## Step 4: Test Locally
 
 Now that we've made all of our changes for the upgrade, and added any Environment Variables that may be needed to our bash_profile, and run `. ~/.bash_profile` to refresh those variables, we are ready to test the upgrade locally. 
 
@@ -94,7 +94,7 @@ Now is the moment where we would run whatever commands are needed for the partic
 
 Once that has completed running, you can run your server again, and test the changes in your local environment.
 
-Step 5: Push & Merge Code Changes
+## Step 5: Push & Merge Code Changes
 
 If it's all good, commit your changes, and push that branch to GitHub.
 `git add .`
@@ -109,7 +109,7 @@ It helps to include a link to the Release Notes, the Compare changes, the Envars
 
 Once this is approved and you've merged the PR into the `develop` branch, it is time to deploy.
 
-Step 6: Deployment
+## Step 6: Deployment
 
 First, head to the Slack channel for this specific project, and ask the BA, (usually I just ping the whole channel by typing `@here`) if you are clear to deploy an upgrade to `v9.1.0`.
 
