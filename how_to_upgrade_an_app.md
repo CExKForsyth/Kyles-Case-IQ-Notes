@@ -17,7 +17,7 @@ Here we can find specific instructions on changes that may need to be made to ou
 
 For the sake of this document, I will walk through upgrading a project from `v9.0.3` to `v9.1.0`
 
-Step 1: Set up your project locally. 
+##Step 1: Set up your project locally. 
 
 If you haven't already, create a directory in your local machine where you can store this project. 
 
