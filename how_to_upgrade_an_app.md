@@ -3,14 +3,17 @@ CASE IQ - Upgrading an Application
 Helpful Tips:
 
 It is helpful to know whether you are doing a major version upgrade, a patch upgrade, or perhaps multiple upgrades. We can find this out by going to Confluence and looking up the release notes for the version we are upgrading to
+
 ![Screen Shot 2023-11-14 at 1 28 27 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/e5bce4b3-8413-4e67-bee9-977eb9335baf)
 
 From the these Release Notes, we can found out all sorts of information about the version we're upgrading to. Take some time to peruse the page to find out more about what changes are being made.
+
 ![Screen Shot 2023-11-14 at 1 29 02 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/16e4a9d0-06d4-4c3f-8941-a9e821c864fd)
 
 On the left side of the page you will see Release Notes listed for different versions. These are the MAJOR releases. If we are upgrading from a Major Release to another, we need to ensure that we are taking careful precautions to read the Release Notes and usually when doing these upgrades we have to run `make p-release-upgrade` when deploying to Jenkins. To find out exactly what needs to be done on the development side, scroll to the bottom of the release notes on Confluence, and you'll find a link to the platform [RELEASE_UPGRADE.md](https://github.com/i-Sight/isight_main_v5_beta/blob/bba2f365536cfc8b22b013215526866631520975/RELEASE_UPGRADE.md) on Github.
 
-Here we can find specific instructions on changes that may need to be made to our projects when upgrading to this version, especially things that may be considered edge-cases, commonly customized features in our config repos, Environment Variables that may have changed, become defunct, or that may be newly required.![Screen Shot 2023-11-14 at 1 35 40 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/3daf4691-a7cc-4f7a-9371-b0df1aaa4548)
+Here we can find specific instructions on changes that may need to be made to our projects when upgrading to this version, especially things that may be considered edge-cases, commonly customized features in our config repos, Environment Variables that may have changed, become defunct, or that may be newly required.
+![Screen Shot 2023-11-14 at 1 35 40 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/3daf4691-a7cc-4f7a-9371-b0df1aaa4548)
 
 For the sake of this document, I will walk through upgrading a project from `v9.0.3` to `v9.1.0`
 
@@ -29,6 +32,7 @@ Run `. ~/.bash_profile` in your terminal to refresh these bash variables.
 Set up this project locally as you normally would. Ensure that you checkout the starting version in your platform. In this case I would checkout `v9.0.3`. We haven't upgraded any of our files yet to `v9.1.0`, so do not worry about the version that we are upgrading to just yet. 
 
 Once you have the project set up locally. Test it out, ensure it has set up and is functioning as expected. Run the project in your browser, and navigate to the /Settings/System/About page to check that the correct version is indeed displaying. 
+
 ![Screen Shot 2023-11-14 at 1 46 42 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/b20a90b2-f4a2-4737-aaaa-2fc10bbcbf1b)
 
 Step 2: Make the Config Changes.
@@ -39,6 +43,7 @@ For the `base:` -> Set it to the version the application is currently on.
 For the `compare` -> Set it to the version we are upgrading to.
 
 Like so:
+
 ![Screen Shot 2023-11-14 at 1 50 51 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/59983d51-a21e-4a70-b615-b43eef9172d8)
 
 Then click the `Files Changed` tab. All of the file changes you see here are what we need to complete in our local project, in our code editor. 
@@ -65,9 +70,11 @@ Now that we've made all of our changes for the upgrade, and added any Environmen
 `CTRL + C` in your terminal to stop your server if it's running. ** Do not run `make breakdown` if you don't have to. It's best to test this upgrade without breaking down the environment, as we are assuming that we will not be breaking down the app when we deploy the upgrade either.
 
 ![Screen Shot 2023-11-14 at 2 13 55 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/df72f3b4-5ae9-4949-9b21-573f19dc40c7)
+
 In your terminal window that has `.../farmers-project/config_FARMER00_v5` open, run `yarn unlink isight`.
 
 ![Screen Shot 2023-11-14 at 2 14 16 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/ef17e8eb-a81e-473e-91da-26774830e786)
+
 Navigate to your terminal that has the `.../farmers-project/isight_main_v5_beta` directory open and run `yarn unlink`.
 In this same terminal, run `git checkout tags/v9.1.0` (or whatever version you're upgrading to)
 Run `nvm use`
@@ -76,6 +83,7 @@ Next run `yarn install --frozen-lockfile`
 Once that's done, run: `yarn link`
 
 ![Screen Shot 2023-11-14 at 2 13 55 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/df72f3b4-5ae9-4949-9b21-573f19dc40c7)
+
 In your terminal window that has `.../farmers-project/config_FARMER00_v5` open, run `yarn link isight`.
 Run `nvm use`
 Next run `yarn install`
@@ -118,15 +126,19 @@ orch04 - Azure Australia
 orch05 - Azure Europe
 
 To get to your project, click `Delivery`
+
 ![Screen Shot 2023-11-14 at 2 23 32 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/07289d6a-cc86-4441-abca-af5a6d1ba501)
 
 Then click `Non-prod`
+
 ![Screen Shot 2023-11-14 at 2 23 46 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/2c3d5e72-e03a-4b52-be18-ef7233607584)
 
 Then find it in the list, and click it.
+
 ![Screen Shot 2023-11-14 at 2 24 04 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/d32b069e-657c-4dcf-b3fb-87d75d10f169)
 
 From here, click the latest build on the left-hand side list of builds, and then from the drop-down, select `Rebuild`.
+
 ![Screen Shot 2023-11-14 at 2 26 38 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/d942de88-0bac-494b-a513-f4569360099b)
 
 
