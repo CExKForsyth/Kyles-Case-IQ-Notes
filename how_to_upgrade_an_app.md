@@ -12,6 +12,12 @@ From the these Release Notes, we can found out all sorts of information about th
 
 On the left side of the page you will see Release Notes listed for different versions. These are the MAJOR releases. If we are upgrading from a Major Release to another, we need to ensure that we are taking careful precautions to read the Release Notes and usually when doing these upgrades we have to run `make p-release-upgrade` when deploying to Jenkins. To find out exactly what needs to be done on the development side, scroll to the bottom of the release notes on Confluence, and you'll find a link to the platform [RELEASE_UPGRADE.md](https://github.com/i-Sight/isight_main_v5_beta/blob/bba2f365536cfc8b22b013215526866631520975/RELEASE_UPGRADE.md) on Github.
 
+- When upgrading from `v9.0.0` to `v9.0.3`, this would be considered a patch release. The changes are extremely minimal, and do not require the use of `make p-release-upgrade` when deploying. A patch release can be identified as you will not see one of the versions in the left-hand list of version releases.
+
+- If you are tasked with upgrading from `v9.0.3` to `v9.2.0`, you cannot upgrade this directly. **Each major release must be upgraded in succession**__, meaning that in order to do this, you would need to upgrade two times: 
+_**First you would upgrade `v9.0.3` to `v9.1.0`
+Then you would repeat the process by upgrading `v9.1.0` to `v9.2.0`**_
+
 Here we can find specific instructions on changes that may need to be made to our projects when upgrading to this version, especially things that may be considered edge-cases, commonly customized features in our config repos, Environment Variables that may have changed, become defunct, or that may be newly required.
 ![Screen Shot 2023-11-14 at 1 35 40 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/3daf4691-a7cc-4f7a-9371-b0df1aaa4548)
 
