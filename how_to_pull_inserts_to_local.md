@@ -220,7 +220,7 @@ Once this has completed, run:
 	make sync-translations
 	make sync-permissions
 	make sync-user-roles
-	make sync-picklists`
+	make sync-picklists
 
 ### Step 13:
 After this point, the last thing you need to do is reassign the correct **user-role-id** to your Test user.
