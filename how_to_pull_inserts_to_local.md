@@ -64,7 +64,6 @@ You will need to run _**each**_ of the following list of commands to strip files
 
 >> Please use a code editor to change the name, make your life easier.
 
-`
 PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_workflow isight > /usr/local/data/db/external-dumps/sys_workflow_2023-09-28-115027.sql
 PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_translation isight > /usr/local/data/db/external-dumps/sys_translation_2023-09-28-115027.sql
 PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_state isight > /usr/local/data/db/external-dumps/sys_state_2023-09-28-115027.sql
@@ -99,7 +98,6 @@ PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --ta
 PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=isight_dynamic_entity_field isight > /usr/local/data/db/external-dumps/isight_dynamic_entity_field_2023-09-28-115027.sql
 PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=isight_dynamic_entity isight > /usr/local/data/db/external-dumps/isight_dynamic_entity_2023-09-28-115027.sql
 PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_layout isight > /usr/local/data/db/external-dumps/sys_layout_2023-09-28-115027.sql
-`
 
 After running each of these from the worker, go back to the db box, and navigate to the external-dumps directory from earlier.   
 
