@@ -6,14 +6,10 @@ To pull inserts and recreate a project env locally, we first run a `make setup` 
 
 In order to properly recreate the environment locally, we also need to login to Teleport and grab data from each of the following tables:
  
-		'sys_workflow'
-
+		`'sys_workflow'
 		'sys_translation',
-
 		'sys_transition',
-
 		'sys_condition',
-
 		'sys_state',
 		'sys_condition_type',
 		'sys_filter',
@@ -42,7 +38,7 @@ In order to properly recreate the environment locally, we also need to login to 
 		'isight_field',
 		'isight_dynamic_entity_field',
 		'isight_dynamic_entity',
-		'sys_layout',
+		'sys_layout',`
 
 We can do this by completing the next series of steps:   
 In the db container for your project, navigate to `/var/isight/backup`  
