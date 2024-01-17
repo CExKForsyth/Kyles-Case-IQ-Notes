@@ -1,11 +1,19 @@
-To pull inserts and recreate a project env locally, we first run a make setup to set up our project locally, as usual.  
+# How to Recreate a PROD Environment Locally
+
+### Step 1: Pull Inserts
+
+To pull inserts and recreate a project env locally, we first run a `make setup` to set up our project locally, as usual.
 
 In order to properly recreate the environment locally, we also need to login to Teleport and grab data from each of the following tables:
  
-		‘sys_workflow’
+		'sys_workflow'
+
 		'sys_translation',
+
 		'sys_transition',
+
 		'sys_condition',
+
 		'sys_state',
 		'sys_condition_type',
 		'sys_filter',
