@@ -62,7 +62,7 @@ You will need to run _**each**_ of the following list of commands to strip files
 >> Make sure you update each of these commands with the **current date**, 
 >> for example if its **November 8th, 2023**, I would update the filename in each to: **sys_workflow_2023-11-08-231108.sql** 
 
->> Please use a code editor to change the name, make your life easier.
+> Please use a code editor to change the name, make your life easier.
 
 `PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_workflow isight > /usr/local/data/db/external-dumps/sys_workflow_2023-09-28-115027.sql 
 PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_translation isight > /usr/local/data/db/external-dumps/sys_translation_2023-09-28-115027.sql 
