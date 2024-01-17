@@ -111,10 +111,11 @@ Now we compile them into a zip file.
 > This is where the date is important.   
 
 From this directory, run the following command to create a zip file, but use the same date as the created files:
-`find *2023-11-08* -exec tar -rvf archive-nov-08.tar.gz {} --strip-components=1 \;`  
+
+	find *2023-11-08* -exec tar -rvf archive-nov-08.tar.gz {} --strip-components=1 \;  
 > Make sure to also change the date in the archive file name to match the date of the field as well  
 
-### Step 7:
+### Step 8:
 Now download the created zip file.
 
 There, we've pulled the inserts successfully, now we need to use this archive locally.
@@ -210,14 +211,14 @@ Now, run all of the DELETE lines from your `delete.txt` file in this window.
 Now open a tab in your terminal in the config directory for your project, and then run the entirety of the `cat.txt` file.
 > Just copy the contents of the file with `CMD+A`, `CMD+C`, then `CMD+V` to paste it in your terminal and run it.
    
-Once this has completed, run:  
-`make migrate DISABLE_DB_BACKUP=true
-make sync-dynamic-forms
-make sync-translations
-make sync-permissions
-make sync-user-roles
-make sync-picklists`
+Once this has completed, run:
 
+	make migrate DISABLE_DB_BACKUP=true
+	make sync-dynamic-forms
+	make sync-translations
+	make sync-permissions
+	make sync-user-roles
+	make sync-picklists`
 
 ### Step 13:
 After this point, the last thing you need to do is reassign the correct **user-role-id** to your Test user.
