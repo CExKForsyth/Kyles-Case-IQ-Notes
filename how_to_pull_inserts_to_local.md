@@ -54,7 +54,7 @@ run the command: `mkdir external-dumps`
 
 #### Step 4: 
 Great, now navigate to the service box and docker exec into the worker.
-==`docker exec -it <id of worker container> bash`==
+>> `docker exec -it <id of worker container> bash`
 
 #### Step 5: 
 You will need to run _**each**_ of the following list of commands to strip files from the db.   
