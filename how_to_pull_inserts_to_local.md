@@ -6,14 +6,11 @@ To pull inserts and recreate a project env locally, we first run a `make setup` 
 
 In order to properly recreate the environment locally, we also need to login to Teleport and grab data from each of the following tables:
  
+
 		'sys_workflow'
-
 		'sys_translation',
-
 		'sys_transition',
-
 		'sys_condition',
-
 		'sys_state',
 		'sys_condition_type',
 		'sys_filter',
