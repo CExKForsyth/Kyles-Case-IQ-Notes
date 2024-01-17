@@ -104,7 +104,9 @@ You will need to run _**each**_ of the following list of commands to strip files
 After running each of these from the worker, go back to the db box, and navigate to the external-dumps directory from earlier.   
 > Run this command: `ls -halt`  
 
-You should now see all the files you just created from the worker.  
+You should now see all the files you just created from the worker.
+
+![Screen Shot 2023-11-08 at 3 12 14 PM](https://github.com/CExKForsyth/kyle_notes/assets/95767293/d1415970-83ea-4f4a-817c-e3f6bb4c2556)
 ￼
 ### Step 7:
 Now we compile them into a zip file. 
