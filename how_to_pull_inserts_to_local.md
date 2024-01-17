@@ -41,19 +41,28 @@ In order to properly recreate the environment locally, we also need to login to 
 		'isight_dynamic_entity',
 		'sys_layout',
 
-We can do this by completing the next series of steps:   
-In the db container for your project, navigate to `/var/isight/backup`  
-`cd /var/isight/backup/` 
-run the command: `ls` 
+We can do this by completing the next series of steps:
+#### Step 1:
+In the db container for your project, navigate to `/var/isight/backup`
+>>`cd /var/isight/backup/`
+#### Step 2:
+run the command: `ls`
 
-if you don’t see an `external-dumps` directory, 
-run the command: `mkdir external-dumps`  
+#### Step 3:
+if you don’t see an `external-dumps` directory,
+run the command: `mkdir external-dumps`
 
-Great, now navigate to the service box and docker exec into the worker.   
-You will need to run each of the following list of commands to strip files from the db in order to recreate the environment locally.   
+#### Step 4: 
+Great, now navigate to the service box and docker exec into the worker.
+>> `docker exec -it <id of worker container> bash`
 
->>Make sure you update each of these commands with the current date, for example if its **November 8th, 2023**, I would update the filename in each to: **sys_workflow_2023-11-08-231108.sql** 
->>Please use a code editor to change the name, make your life easier.  
+#### Step 5: 
+You will need to run _**each**_ of the following list of commands to strip files from the db in order to recreate the environment locally.   
+
+>> Make sure you update each of these commands with the **current date**, 
+>> for example if its **November 8th, 2023**, I would update the filename in each to: **sys_workflow_2023-11-08-231108.sql** 
+
+>> Please use a code editor to change the name, make your life easier.
 
 `PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_workflow isight > /usr/local/data/db/external-dumps/sys_workflow_2023-09-28-115027.sql 
 PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_translation isight > /usr/local/data/db/external-dumps/sys_translation_2023-09-28-115027.sql 
