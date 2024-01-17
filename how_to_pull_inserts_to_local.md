@@ -44,7 +44,7 @@ In order to properly recreate the environment locally, we also need to login to 
 We can do this by completing the next series of steps:
 #### Step 1:
 In the db container for your project, navigate to `/var/isight/backup`
->>`cd /var/isight/backup/`
+>`cd /var/isight/backup/`
 #### Step 2:
 run the command: `ls`
 
@@ -54,15 +54,15 @@ run the command: `mkdir external-dumps`
 
 #### Step 4: 
 Great, now navigate to the service box and docker exec into the worker.
->> `docker exec -it <id of worker container> bash`
+> `docker exec -it <id of worker container> bash`
 
 #### Step 5: 
 You will need to run _**each**_ of the following list of commands to strip files from the db.   
 
->> Make sure you update each of these commands with the **current date**, 
->> for example if its **November 8th, 2023**, I would update the filename in each to: **sys_workflow_2023-11-08-231108.sql** 
+> Make sure you update each of these commands with the **current date**, 
+> for example if its **November 8th, 2023**, I would update the filename in each to: **sys_workflow_2023-11-08-231108.sql** 
 
->> Please use a code editor to change the name, make your life easier
+> Please use a code editor to change the name, make your life easier
 
 
 	PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_workflow isight > /usr/local/data/db/external-dumps/sys_workflow_2023-11-08-231108.sql
@@ -102,17 +102,17 @@ You will need to run _**each**_ of the following list of commands to strip files
 
 ### Step 6:
 After running each of these from the worker, go back to the db box, and navigate to the external-dumps directory from earlier.   
->> Run this command: `ls -halt`  
+> Run this command: `ls -halt`  
 
 You should now see all the files you just created from the worker.  
 ￼
 ### Step 7:
 Now we compile them into a zip file. 
->> This is where the date is important.   
+> This is where the date is important.   
 
 From this directory, run the following command to create a zip file, but use the same date as the created files:
 `find *2023-11-08* -exec tar -rvf archive-nov-08.tar.gz {} --strip-components=1 \;`  
->>make sure to also change the date in the archive file name to match the date of the field as well  
+> Make sure to also change the date in the archive file name to match the date of the field as well  
 
 ### Step 7:
 Now download the created zip file.
@@ -139,7 +139,7 @@ files.forEach(file => {
     }
 })
 });`
->> Change the path the match your path, with your local username replacing ✺✺✺✺✺✺✺✺✺, and the correct archive zip file name after Desktop/_________.
+> Change the path the match your path, with your local username replacing ✺✺✺✺✺✺✺✺✺, and the correct archive zip file name after Desktop/_________.
 
 ### Step 4:
 Now create a new empty file in the base of the directory called `cat.txt`  
@@ -149,7 +149,7 @@ Open the VSCode terminal, and from the base of this directory, run: `node script
 
 ### Step 6:
 Copy the entire result from your terminal, and past the entire result into `cat.txt`. 
->> Save this file.
+> Save this file.
 
 ### Step 7:
 Now create another new file in the base of the directory called `delete.txt` 
@@ -192,7 +192,7 @@ Paste all of these queries into `delete.txt`:  
 	DELETE FROM sys_document_action WHERE 1 = 1;
 	DELETE FROM sys_layout WHERE 1 = 1;
 
->> Save this file. 
+> Save this file. 
 
 
 ### Step 9:
@@ -203,11 +203,11 @@ Enter Postgres by using the command:   `psql -U postgres -d isight`  
 
 ### Step 11:
 Now, run all of the DELETE lines from your `delete.txt` file in this window. 
->> You may need to run them in groups, as my terminal was crashing trying to run them all at once.  
+> You may need to run them in groups, as my terminal was crashing trying to run them all at once.  
 
 ### Step 12:
 Now open a tab in your terminal in the config directory for your project, and then run the entirety of the `cat.txt` file.
->> Just copy the contents of the file with `CMD+A`, `CMD+C`, then `CMD+V` to paste it in your terminal and run it.
+> Just copy the contents of the file with `CMD+A`, `CMD+C`, then `CMD+V` to paste it in your terminal and run it.
    
 Once this has completed, run:  
 `make migrate DISABLE_DB_BACKUP=true
@@ -221,9 +221,9 @@ make sync-picklists`
 ### Step 13:
 After this point, the last thing you need to do is reassign the correct **user-role-id** to your Test user.
 
->> I do this by opening Postico, finding the **id** for the _**Super User user-role**_, copying it,
->> and pasting it directly into the **user-role-id** field in the **sys_user** table for the Test user,
->> then clicking Save. It’s a janky way to do things, but it works for me.  
+> I do this by opening Postico, finding the **id** for the _**Super User user-role**_, copying it,
+> and pasting it directly into the **user-role-id** field in the **sys_user** table for the Test user,
+> then clicking Save. It’s a janky way to do things, but it works for me.  
 
 ### Step 14:
 Now if you run `make watch`, and `node server`, you should essentially have a cloned version of the PROD application running on your local.
