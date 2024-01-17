@@ -140,7 +140,7 @@ Create a new file at the base of the directory called `script.js`  In this f
 		})
 	});
 
-> Change the path the match your path, with your local username replacing ✺✺✺✺✺✺✺✺✺, and the correct archive zip file name after Desktop/_________.
+> Make sure to change the path the match your path, with your local username replacing ✺✺✺✺✺✺✺✺✺, and the archive zip file name after Desktop/_________.
 
 ### Step 4:
 Now create a new empty file in the base of the directory called `cat.txt`  
