@@ -62,42 +62,44 @@ You will need to run _**each**_ of the following list of commands to strip files
 >> Make sure you update each of these commands with the **current date**, 
 >> for example if its **November 8th, 2023**, I would update the filename in each to: **sys_workflow_2023-11-08-231108.sql** 
 
-> Please use a code editor to change the name, make your life easier.
+>> Please use a code editor to change the name, make your life easier.
 
-`PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_workflow isight > /usr/local/data/db/external-dumps/sys_workflow_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_translation isight > /usr/local/data/db/external-dumps/sys_translation_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_state isight > /usr/local/data/db/external-dumps/sys_state_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_transition isight > /usr/local/data/db/external-dumps/sys_transition_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_condition isight > /usr/local/data/db/external-dumps/sys_condition_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_condition_type isight > /usr/local/data/db/external-dumps/sys_condition_type_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_filter isight > /usr/local/data/db/external-dumps/sys_filter_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_filter_child isight > /usr/local/data/db/external-dumps/sys_filter_child_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_filter_group isight > /usr/local/data/db/external-dumps/sys_filter_group_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_assignment_action isight > /usr/local/data/db/external-dumps/sys_assignment_action_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_document_action isight > /usr/local/data/db/external-dumps/sys_document_action_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_permission isight > /usr/local/data/db/external-dumps/sys_permission_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_automated_todo_action isight > /usr/local/data/db/external-dumps/sys_automated_todo_action_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_field_value_action isight > /usr/local/data/db/external-dumps/sys_field_value_action_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_notification_action isight > /usr/local/data/db/external-dumps/sys_notification_action_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_schedule_purge_action isight > /usr/local/data/db/external-dumps/sys_schedule_purge_action_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_rule isight > /usr/local/data/db/external-dumps/sys_rule_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_workflow isight > /usr/local/data/db/external-dumps/sys_workflow_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_user_role isight > /usr/local/data/db/external-dumps/sys_user_role_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_role_permission isight > /usr/local/data/db/external-dumps/sys_role_permission_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_role_filter isight > /usr/local/data/db/external-dumps/sys_role_filter_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_list isight > /usr/local/data/db/external-dumps/sys_list_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_listitem isight > /usr/local/data/db/external-dumps/sys_listitem_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_grid_column isight > /usr/local/data/db/external-dumps/sys_grid_column_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_grid_data_filter isight > /usr/local/data/db/external-dumps/sys_grid_data_filter_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_grid_data_filter_child isight > /usr/local/data/db/external-dumps/sys_grid_data_filter_child_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_grid_filter isight > /usr/local/data/db/external-dumps/sys_grid_filter_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_flag isight > /usr/local/data/db/external-dumps/sys_flag_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_entity_evaluator isight > /usr/local/data/db/external-dumps/sys_entity_evaluator_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=isight_entity isight > /usr/local/data/db/external-dumps/isight_entity_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=isight_field isight > /usr/local/data/db/external-dumps/isight_field_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=isight_dynamic_entity_field isight > /usr/local/data/db/external-dumps/isight_dynamic_entity_field_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=isight_dynamic_entity isight > /usr/local/data/db/external-dumps/isight_dynamic_entity_2023-09-28-115027.sql 
-PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_layout isight > /usr/local/data/db/external-dumps/sys_layout_2023-09-28-115027.sql` 
+`
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_workflow isight > /usr/local/data/db/external-dumps/sys_workflow_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_translation isight > /usr/local/data/db/external-dumps/sys_translation_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_state isight > /usr/local/data/db/external-dumps/sys_state_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_transition isight > /usr/local/data/db/external-dumps/sys_transition_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_condition isight > /usr/local/data/db/external-dumps/sys_condition_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_condition_type isight > /usr/local/data/db/external-dumps/sys_condition_type_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_filter isight > /usr/local/data/db/external-dumps/sys_filter_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_filter_child isight > /usr/local/data/db/external-dumps/sys_filter_child_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_filter_group isight > /usr/local/data/db/external-dumps/sys_filter_group_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_assignment_action isight > /usr/local/data/db/external-dumps/sys_assignment_action_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_document_action isight > /usr/local/data/db/external-dumps/sys_document_action_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_permission isight > /usr/local/data/db/external-dumps/sys_permission_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_automated_todo_action isight > /usr/local/data/db/external-dumps/sys_automated_todo_action_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_field_value_action isight > /usr/local/data/db/external-dumps/sys_field_value_action_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_notification_action isight > /usr/local/data/db/external-dumps/sys_notification_action_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_schedule_purge_action isight > /usr/local/data/db/external-dumps/sys_schedule_purge_action_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_rule isight > /usr/local/data/db/external-dumps/sys_rule_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_workflow isight > /usr/local/data/db/external-dumps/sys_workflow_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_user_role isight > /usr/local/data/db/external-dumps/sys_user_role_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_role_permission isight > /usr/local/data/db/external-dumps/sys_role_permission_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_role_filter isight > /usr/local/data/db/external-dumps/sys_role_filter_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_list isight > /usr/local/data/db/external-dumps/sys_list_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_listitem isight > /usr/local/data/db/external-dumps/sys_listitem_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_grid_column isight > /usr/local/data/db/external-dumps/sys_grid_column_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_grid_data_filter isight > /usr/local/data/db/external-dumps/sys_grid_data_filter_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_grid_data_filter_child isight > /usr/local/data/db/external-dumps/sys_grid_data_filter_child_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_grid_filter isight > /usr/local/data/db/external-dumps/sys_grid_filter_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_flag isight > /usr/local/data/db/external-dumps/sys_flag_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_entity_evaluator isight > /usr/local/data/db/external-dumps/sys_entity_evaluator_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=isight_entity isight > /usr/local/data/db/external-dumps/isight_entity_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=isight_field isight > /usr/local/data/db/external-dumps/isight_field_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=isight_dynamic_entity_field isight > /usr/local/data/db/external-dumps/isight_dynamic_entity_field_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=isight_dynamic_entity isight > /usr/local/data/db/external-dumps/isight_dynamic_entity_2023-09-28-115027.sql
+PGPASSWORD= pg_dump --column-inserts --data-only -h db -p 5432 -U postgres  --table=sys_layout isight > /usr/local/data/db/external-dumps/sys_layout_2023-09-28-115027.sql
+`
 
 After running each of these from the worker, go back to the db box, and navigate to the external-dumps directory from earlier.   
 
