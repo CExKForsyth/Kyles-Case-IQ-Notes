@@ -130,15 +130,15 @@ Now open the directory in VSCODE.
 ### Step 3:
 Create a new file at the base of the directory called `script.js`  In this file, add this code:  
 
-	`const fs = require('fs');
+	const fs = require('fs');
 	fs.readdir('./', (error, files) => {
-	console.log('files:', files);
-	files.forEach(file => {
-    	if(file.includes('.sql')){
-        	console.log(``cat /Users/✺✺✺✺✺✺✺✺/Desktop/archive-nov-08/${file} | PGPASSWORD=postgres  psql  -h 127.0.0.1 -p 5432 -U postgres --set ON_ERROR_STOP=on isight``);
-    	}
-	})
-	});`
+		console.log('files:', files);
+		files.forEach(file => {
+    			if(file.includes('.sql')){
+        			console.log(``cat /Users/✺✺✺✺✺✺✺✺/Desktop/archive-nov-08/${file} | PGPASSWORD=postgres  psql  -h 127.0.0.1 -p 5432 -U postgres --set ON_ERROR_STOP=on isight``);
+    			}
+		})
+	});
 
 > Change the path the match your path, with your local username replacing ✺✺✺✺✺✺✺✺✺, and the correct archive zip file name after Desktop/_________.
 
