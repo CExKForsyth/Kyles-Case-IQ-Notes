@@ -1,4 +1,4 @@
-# How to Recreate a UAT/PAT/PROD Environment Locally
+# How to Recreate a UAT/PROD Environment Locally
 
 ## Part 1: Pulling Inserts
 
