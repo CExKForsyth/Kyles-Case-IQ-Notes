@@ -138,7 +138,7 @@ Create a new file at the base of the directory called `script.js`  In this f
 		console.log('files:', files);
 		files.forEach(file => {
     			if(file.includes('.sql')){
-        			console.log(``cat /Users/✺✺✺✺✺✺✺✺/Desktop/archive-nov-08/${file} | PGPASSWORD=postgres  psql  -h 127.0.0.1 -p 5432 -U postgres --set ON_ERROR_STOP=on isight``);
+        			console.log(`cat /Users/✺✺✺✺✺✺✺✺/Desktop/archive-nov-08/${file} | PGPASSWORD=postgres  psql  -h 127.0.0.1 -p 5432 -U postgres --set ON_ERROR_STOP=on isight`);
     			}
 		})
 	});
