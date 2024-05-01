@@ -1,0 +1,58 @@
+# How to Import a New Language from XLSX into v9.5.1
+
+## Part 1: Local Setup
+
+#### Step 1:
+Set up your application normally on your local machine.
+
+#### Step 2:
+in the script directory of your config, create a file called `import-language.js`
+in the script directory, also create a new directory called `language-files`
+
+#### Step 3:
+In the import-language.js file, paste [this script](#)
+
+#### Step 4: 
+Ensure that the names for each variable match what's coming in on your new translation file.
+
+#### Step 5: 
+In the language-files directory, add the xlsx file of new translations
+
+
+## Part 2: Get the sys_translation Template
+
+#### Step 1:
+Run your local environment, and navigate to Settings/System/Languages
+
+#### Step 2:
+If you see your language in the grid, click on it, then click Delete, to remove all current translations for that language.
+Then, select Add Language, and select your language again to add it.
+> This will generate a full standard set of translations for your language (they will still be english at this time)
+
+#### Step 3:
+Navigate to Settings/System/Configuration Export & Import
+
+#### Step 4:
+In the grid, tick the box for `Translations`, then click export and export that file. 
+
+#### Step 5:
+Once downloaded, unzip it, and place the csv in your project in the script/language-files directory.
+
+#### Step 6:
+In your `import-language.js` script, ensure the variable for templateFilePath matches the name of this file. 
+
+## Part 3: Adding the Language
+
+#### Step 1:
+In your local terminal, run `node script/import-language.js`
+
+#### Step 2:
+Once completed, a new directory with a file called `sys_translation.csv` should be saved to your desktop.
+
+#### Step 3:
+In your application, once again navigate to Settings/System/Configuration Export & Import.
+
+This time, import this new file. It should overwrite all translations, including the new language translations with the updated values.
+
+#### Step 4:
+Change your user profile language to the new language, hard refresh and clear cache and test.
