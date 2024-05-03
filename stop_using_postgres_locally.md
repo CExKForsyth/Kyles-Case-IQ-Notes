@@ -11,9 +11,11 @@ Once you've stopped Postgres, and you rerun `make setup`, watch the Quartz conta
 If you need to run SQL commands in postgres, you wont be able to do so from your Terminal now, but rather, you can use Docker Desktop
 
 Click on the name of the postgres container
+
 ![Screen Shot 2024-05-03 at 3 35 01 PM](https://github.com/CExKForsyth/Kyles-Case-IQ-Notes/assets/95767293/0225512d-b3dd-40b0-bf67-a233c4a4d417)
 
 Click Terminal
+
 ![Screen Shot 2024-05-03 at 3 35 22 PM](https://github.com/CExKForsyth/Kyles-Case-IQ-Notes/assets/95767293/e3632b9b-5425-4dc1-8c0c-19f7f0ab12b3)
 
 Run this command:
