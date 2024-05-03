@@ -1,4 +1,4 @@
-## Using Postgres locally can often cause the quartz container to consitently crash
+## Using Postgres locally can often cause the quartz container to consistently crash
 
 This can be avoided by Stopping Postgres from running (it usually starts automatically at startup)
 
